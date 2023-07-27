@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const FooterTitle = styled.h5`
+const FooterTitle = styled.h2`
   color: ${({ theme }) => theme.palette.white};
   font-family: ${({ theme }) => theme.typography.fontFamilyPolySans};
 

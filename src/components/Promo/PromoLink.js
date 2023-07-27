@@ -5,7 +5,7 @@ const PromoLink = styled.a`
   font-family: ${({ theme }) => theme.typography.fontFamilyPolySans};
   font-size: 14px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: ${({ theme }) => theme.typography.fontWeight.semiBold};
   line-height: 18px;
   letter-spacing: 0.42px;
   display: flex;

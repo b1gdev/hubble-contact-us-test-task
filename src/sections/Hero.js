@@ -10,11 +10,13 @@ import {
 const Hero = ({ title, imageSet, subTitle }) => (
   <HeroWrapper>
     <HeroImageWrapper>
-      <HeroImage
-        alt={imageSet.alt}
-        src={imageSet.laptop}
-        srcSet={`${imageSet.mobile} 479w, ${imageSet.laptop} 480w`}
-      />
+      <picture>
+        <source media="(max-width: 479px)" srcSet={imageSet.mobileWebp} type="image/webp" />
+        <source media="(min-width: 480px)" srcSet={imageSet.laptopWebp} type="image/webp" />
+        <source media="(max-width: 479px)" srcSet={imageSet.mobile} type="image/jpeg" />
+        <source media="(min-width: 480px)" srcSet={imageSet.laptop} type="image/jpeg" />
+        <HeroImage src={imageSet.mobileWebp} alt={imageSet.alt} />
+      </picture>
     </HeroImageWrapper>
     <HeroContent>
       <HeroTitle>{title}</HeroTitle>

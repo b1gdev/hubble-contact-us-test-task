@@ -29,9 +29,9 @@ const Footer = ({ title, inputPlaceholder, buttonText, copyrightText, socials, n
               <FooterFormButton>{buttonText}</FooterFormButton>
             </FooterForm>
             <FooterSocialStack>
-              {socials.map(({ icon, path }) => (
-                <FooterSocialItem href={path}>
-                  <FooterSocialIcon src={icon} />
+              {socials.map(({ icon, path, id, altText }) => (
+                <FooterSocialItem href={path} key={id}>
+                  <FooterSocialIcon src={icon} alt={altText} />
                 </FooterSocialItem>
               ))}
             </FooterSocialStack>
@@ -39,11 +39,13 @@ const Footer = ({ title, inputPlaceholder, buttonText, copyrightText, socials, n
           <FooterCopyrightText>{copyrightText}</FooterCopyrightText>
         </FooterLeftColumn>
         <FooterRightColumn>
-          {navigation.map(({ title, links }) => (
-            <FooterNavColumn>
+          {navigation.map(({ title, links, id }) => (
+            <FooterNavColumn key={id}>
               <FooterNavColumnTitle>{title}</FooterNavColumnTitle>
-              {links.map(({ title, path }) => (
-                <FooterNavColumnItem href={path}>{title}</FooterNavColumnItem>
+              {links.map(({ title, path, id: itemId }) => (
+                <FooterNavColumnItem href={path} key={itemId}>
+                  {title}
+                </FooterNavColumnItem>
               ))}
             </FooterNavColumn>
           ))}

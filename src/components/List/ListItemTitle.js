@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 
-const ListItemTitle = styled.h3`
+const ListItemTitle = styled.h2`
   color: ${({ theme }) => theme.palette.gray.light};
   font-family: ${({ theme }) => theme.typography.fontFamilyPolySans};
-  font-weight: 600;
+  font-weight: ${({ theme }) => theme.typography.fontWeight.semiBold};
   text-align: center;
 
   ${({ theme }) => theme.breakpoints.down("md")} {

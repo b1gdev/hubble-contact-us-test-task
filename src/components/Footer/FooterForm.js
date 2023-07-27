@@ -13,6 +13,12 @@ const FooterForm = styled.form`
     padding: 3px 3px 3px 11px;
   }
 
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    max-width: 456px;
+    gap: 12px;
+    padding: 3px 3px 3px 11px;
+  }
+
   ${({ theme }) => theme.breakpoints.up("md")} {
     width: 456px;
     gap: 24px;

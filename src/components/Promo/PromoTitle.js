@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const PromoTitle = styled.h6`
+const PromoTitle = styled.h2`
   margin-bottom: 24px;
   color: ${({ theme }) => theme.palette.purple.dark};
   font-family: ${({ theme }) => theme.typography.fontFamilyPolySans};

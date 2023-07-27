@@ -14,6 +14,7 @@ const HeaderNav = styled.div`
     top: 95%;
     border-radius: 3px;
     padding: 20px;
+    z-index: 10;
   }
 `;
 

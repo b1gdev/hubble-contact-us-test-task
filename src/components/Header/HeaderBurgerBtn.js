@@ -11,7 +11,7 @@ const HeaderBurgerBtn = styled.button`
 
     span {
       width: ${({ isOpen }) => (isOpen ? "0" : "16px")};
-      height: 2px;
+      height: 1px;
       background-color: ${({ theme }) => theme.palette.gray.light};
       transition: 0.3s;
       border-radius: 1px;
@@ -22,14 +22,14 @@ const HeaderBurgerBtn = styled.button`
       content: "";
       position: absolute;
       width: 16px;
-      height: 2px;
+      height: 1px;
       background-color: ${({ theme }) => theme.palette.gray.light};
       transition: 0.3s;
       border-radius: 1px;
     }
 
     &::before {
-      top: ${({ isOpen }) => (isOpen ? "7px" : "1px")};
+      top: ${({ isOpen }) => (isOpen ? "7px" : "2px")};
       transform: rotate(${({ isOpen }) => (isOpen ? "-45deg" : "0")});
     }
 

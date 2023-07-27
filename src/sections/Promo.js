@@ -24,11 +24,14 @@ const Promo = ({ eyebrow, title, linkText, linkPath, imageSet }) => {
               <PromoLinkArrow />
             </PromoLink>
           </PromoContent>
-          <PromoImage
-            alt={imageSet.alt}
-            src={imageSet.mobile}
-            srcSet={`${imageSet.mobile} 720w, ${imageSet.laptop} 721w`}
-          />
+
+          <picture>
+            <source media="(max-width: 720px)" srcSet={imageSet.mobileWebp} type="image/webp" />
+            <source media="(min-width: 721px)" srcSet={imageSet.laptopWebp} type="image/webp" />
+            <source media="(max-width: 720px)" srcSet={imageSet.mobile} type="image/jpeg" />
+            <source media="(min-width: 721px)" srcSet={imageSet.laptop} type="image/jpeg" />
+            <PromoImage alt={imageSet.alt} src={imageSet.mobileWebp} />
+          </picture>
         </PromoContainer>
       </Container>
     </PromoWrapper>

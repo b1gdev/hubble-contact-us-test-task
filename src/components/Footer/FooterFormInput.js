@@ -8,6 +8,10 @@ const FooterFormInput = styled.input`
   flex-shrink: 1;
   line-height: 24px;
   outline: unset;
+
+  ${({ theme }) => theme.breakpoints.down("xxsm")} {
+    max-width: 170px;
+  }
 `;
 
 export default FooterFormInput;

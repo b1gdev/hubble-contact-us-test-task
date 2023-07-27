@@ -6,7 +6,7 @@ const PromoEyebrow = styled.span`
   color: ${({ theme }) => theme.palette.purple.dark};
   font-family: ${({ theme }) => theme.typography.fontFamilyNeueHaasUnica};
   font-size: 11px;
-  font-weight: 800;
+  font-weight: ${({ theme }) => theme.typography.fontWeight.extraBold};
   line-height: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;

@@ -21,26 +21,28 @@ const Header = ({ links, logo }) => {
     <HeaderWrapper>
       <HeaderContainer>
         <HeaderLeftWrapper>
-          <HeaderBurgerBtn isOpen={isOpen} onClick={handleIsOpen}>
+          <HeaderBurgerBtn aria-label="toggle burger menu" isOpen={isOpen} onClick={handleIsOpen}>
             <span />
           </HeaderBurgerBtn>
-          <HeaderLogo src={logo} />
+          <a href="/">
+            <HeaderLogo alt="Logo image" src={logo} />
+          </a>
           <HeaderNav isOpen={isOpen}>
-            {links.map(({ title, path }) => (
-              <HeaderNavItem href={path} key={title}>
+            {links.map(({ title, path, id }) => (
+              <HeaderNavItem href={path} key={id}>
                 {title}
               </HeaderNavItem>
             ))}
           </HeaderNav>
         </HeaderLeftWrapper>
         <HeaderActions>
-          <HeaderIcon>
+          <HeaderIcon aria-label="open account">
             <UserIcon />
           </HeaderIcon>
-          <HeaderIcon>
+          <HeaderIcon aria-label="open cart">
             <BagIcon />
           </HeaderIcon>
-          <HeaderIcon>
+          <HeaderIcon aria-label="open search">
             <SearchIcon />
           </HeaderIcon>
         </HeaderActions>

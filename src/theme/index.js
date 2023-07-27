@@ -1,5 +1,6 @@
 const breakpoints = {
   values: {
+    xxsm: 321,
     xsm: 375,
     sm: 480,
     md: 768,
@@ -28,10 +29,6 @@ const theme = {
     },
   },
   typography: {
-    rootFontSize: 16,
-    pxToRem(value) {
-      return `${(value / this.rootFontSize).toFixed(3)}rem`;
-    },
     fontFamilyPolySans: `PolySans-Trial, ${typography.fontFamily}`,
     fontFamilyNeueHaasUnica: `"Neue Haas Unica", ${typography.fontFamily}`,
     fontWeight: {
@@ -39,6 +36,7 @@ const theme = {
       medium: 500,
       semiBold: 600,
       bold: 700,
+      extraBold: 800,
     },
   },
   breakpoints: {

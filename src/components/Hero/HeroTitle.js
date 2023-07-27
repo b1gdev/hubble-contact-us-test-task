@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const HeroTitle = styled.h1`
   color: ${({ theme }) => theme.palette.white};
   font-family: ${({ theme }) => theme.typography.fontFamilyPolySans};
-  font-weight: 700;
+  font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
 
   ${({ theme }) => theme.breakpoints.down("md")} {
     font-size: 36px;
