@@ -9,7 +9,6 @@ const ContactUs = () => {
         .map(({ component, position, ...props }) => {
           const Section = sections[component];
           if (Section) {
-            // ideally position in key should be replaced by some ID
             return <Section key={position} {...props} />;
           }
           return null;
